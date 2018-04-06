@@ -1,0 +1,13 @@
+.right-column {
+  border-left: 2px solid #6c757d;
+}
+
+.left-content, .right-content {
+  margin-top: 15px;
+}
+
+tx-grid {
+  /* A little trick from https://getbootstrap.com/docs/4.0/content/typography/#responsive-typography */
+  font-size: 0.8rem
+}
+

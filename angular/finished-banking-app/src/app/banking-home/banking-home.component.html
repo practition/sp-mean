@@ -1,0 +1,18 @@
+<div class="row" *ngIf="lastTx && last5Tx">
+  <section class="col-8">
+    <div class="left-content">
+      <h2>Welcome to Speeding Planet Banking</h2>
+      <small class="text-muted">Disrupting banking since 830am this morning</small>
+      <banking-daily-status [lastTx]="lastTx"></banking-daily-status>
+    </div>
+  </section>
+  <section class="col-4 right-column">
+    <div class="right-content">
+      <h3 class="text-center">Last five transactions</h3>
+      <tx-grid [txs]="last5Tx" (selectTx)="handleSelectTx($event)"></tx-grid>
+      <hr>
+      <h3 class="text-center">{{ lastTxBanner }}</h3>
+      <tx-detail [tx]="getDetailTx()"></tx-detail>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,12 @@
+.banking-banner-bottom {
+  border-bottom: black 2px solid;
+  padding: 10px;
+}
+
+.banking-content-top {
+  margin-top: 15px;
+}
+
+.banking-container {
+  width: 85%
+}

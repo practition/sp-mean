@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-header">Paid {{ tx.amount | abs | currency }} to {{ tx.payee.payeeName }}</div>
+  <ul class="list-group">
+    <li class="list-group-item">Payee: {{ tx.payee.payeeName }}</li>
+    <li class="list-group-item">Amount: <span [style.color]="tx.amount < 0 ? 'red' : 'green'">{{ tx.amount | abs | currency }}</span>
+    </li>
+    <li class="list-group-item">Date: {{ tx.txDate | date }}</li>
+    <li class="list-group-item">Category: {{ tx.category.categoryName }}</li>
+    <li class="list-group-item">Cleared? {{ tx.cleared ? 'yes' : 'no'}}</li>
+    <li class="list-group-item"></li>
+  </ul>
+</div>
