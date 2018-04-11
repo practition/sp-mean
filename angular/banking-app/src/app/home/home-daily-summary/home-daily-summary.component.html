@@ -1,0 +1,6 @@
+<div *ngIf="summary">
+  You spent {{ summary.lastTxAmount | currency }} at {{ summary.lastTxPayee }}
+  in your last transaction. You have spent
+  {{ summary.categoryAmount | currency }} on
+  {{ summary.category | lowercase }} this {{ today | date: 'MMMM' }}.
+</div>
