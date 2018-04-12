@@ -3,8 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { TxManagerComponent } from './tx-manager/tx-manager.component';
 import { TxDetailComponent } from './tx-detail/tx-detail.component';
 import { TxEditComponent } from './tx-edit/tx-edit.component';
-import { TxGridManagerComponent } from './tx-grid-manager/tx-grid-manager.component';
-import { TxGridManagerResolverService } from './tx-grid-manager-resolver.service';
 
 const routes: Routes = [
   {

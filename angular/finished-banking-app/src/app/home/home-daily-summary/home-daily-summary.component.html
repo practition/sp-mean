@@ -1,0 +1,14 @@
+<section>
+  <div class="card">
+    <div class="card-header text-light">
+      Here is your daily summary:
+    </div>
+    <div class="card-body" *ngIf="summary | async as summary">
+      <p>You spent {{ summary.lastTxAmount | abs | currency }} at {{ summary.lastTxPayee }}
+        in your last transaction. </p>
+      <p>You have spent {{ summary.categoryAmount | abs | currency }} on
+        {{ summary.category | lowercase }} this {{ summary.lastTx.txDate | date: 'MMMM' }}.</p>
+      <p>You have {{ summary.notClearedCount }} pending transactions.</p>
+    </div>
+  </div>
+</section>

@@ -9,7 +9,7 @@ import { Transaction } from '../Transaction';
 export class TxDetailComponent implements OnInit {
 
   @Input()
-  tx: Transaction;
+  displayTx: Transaction;
 
   constructor() { }
 

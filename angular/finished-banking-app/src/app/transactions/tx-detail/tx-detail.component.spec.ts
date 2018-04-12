@@ -51,7 +51,7 @@ describe( 'TxDetailComponent', () => {
   beforeEach( () => {
     fixture = TestBed.createComponent( TxDetailComponent );
     component = fixture.componentInstance;
-    component.tx = testLastTx;
+    component.displayTx = testLastTx;
     fixture.detectChanges();
   } );
 

@@ -39,9 +39,21 @@ export class TransactionsDaoService {
     return this.getNotCleared().map( txs => txs.length );
   }
 
-  getTransactionById( id: number ) {}
+  getAmountSpentByCategory( categoryName: string ): Observable<number> {
+    return this.http.get<Transaction[]>(
+      `${this.baseUrl}?category.categoryName=${categoryName}&txDate_like=2016-07-` )
+      .map( transactions => {
+        let total = 0;
+        transactions.forEach( tx => total += tx.amount );
+        return total;
+      } );
+  }
 
-  list() {}
+  getAmountSpentByCategoryReduce( categoryName: string ): Observable<number> {
+    return this.http.get<Transaction[]>(
+      `${this.baseUrl}/tx?category.categoryName=${categoryName}&txDate_like=2016-07-` )
+      .map( transactions => transactions.map( tx => tx.amount ).reduce( ( total, current ) => total + current ) );
+  }
 
   query( criteria: TxCriteria ): Observable<Transaction[]> {
     return this.http.get<Transaction[]>( `${this.baseUrl}?${criteria.getQueryString()}` )
