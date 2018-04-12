@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { HomeSummary } from './HomeSummary';
 import { Observable } from 'rxjs/Observable';
 import { Transaction } from './Transaction';
 import { catchError } from 'rxjs/operators';
-import 'rxjs/add/operator/map';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class HomeDaoService {
@@ -17,6 +17,10 @@ export class HomeDaoService {
     return this.http.get<Transaction>(`${this.baseUrl}/tx/${id}`);
   }
 
+  listTx(): Observable<Transaction[]> {
+    return this.http.get<Transaction[]>(`${this.baseUrl}/tx/?_expand=payee`);
+  }
+
   getLatestTx(): Observable<Transaction> {
     return this.http
       .get<Transaction[]>(`${this.baseUrl}/tx/?_sort=txDate&_order=desc&_limit=1&_expand=payee`)
@@ -24,12 +28,28 @@ export class HomeDaoService {
       .map(transactions => transactions[0]);
   }
 
-  someErrorHandler(err): ErrorObservable {
-    // Http error?
+  someErrorHandler(err: HttpErrorResponse): ErrorObservable {
+    let msg = '';
 
-    // Other kind of error?
+    // JavaScript error?
+    if (err.error instanceof ErrorEvent) {
+      console.error('Javascript had a problem with the data (parsing, etc.');
+      msg = 'JavaScript error';
+    } else {
+      // HttpError
+      switch (err.status) {
+        case 404:
+        msg = 'Could not find results';
+        break;
+        case 500:
+        msg = 'Server was down';
+        break;
+        default:
+        msg = 'Good luck with that.';
+      }
+    }
 
-    return new ErrorObservable('Oops, something went wrong');
+    return new ErrorObservable({message: `Oops, something went wrong: [${msg}]`, code: 1001});
   }
 
   getAmountSpentByCategory(categoryName: string): Observable<number> {

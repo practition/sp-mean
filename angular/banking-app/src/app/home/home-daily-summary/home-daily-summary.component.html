@@ -1,6 +1,13 @@
-<div *ngIf="summary">
-  You spent {{ summary.lastTxAmount | currency }} at {{ summary.lastTxPayee }}
-  in your last transaction. You have spent
-  {{ summary.categoryAmount | currency }} on
-  {{ summary.category | lowercase }} this {{ today | date: 'MMMM' }}.
-</div>
+<section>
+    <div class="card">
+      <div class="card-header text-light">
+        Here is your daily summary:
+      </div>
+      <div class="card-body" *ngIf="summary">
+        You spent {{ summary.lastTxAmount | currency }} at {{ summary.lastTxPayee }}
+        in your last transaction. You have spent
+        {{ summary.categoryAmount | currency }} on
+        {{ summary.category | lowercase }} this {{ today | date: 'MMMM' }}.
+      </div>
+    </div>
+</section>

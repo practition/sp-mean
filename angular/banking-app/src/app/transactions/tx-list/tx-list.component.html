@@ -1,0 +1,19 @@
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th>Payee</th>
+      <th>Amount</th>
+      <th>Date</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tx of transactions"
+    (click)="handleClick(tx)">
+      <td>{{ tx.payee.payeeName }}</td>
+      <td>{{ tx.amount | currency }}</td>
+      <td class="text-nowrap">{{ tx.txDate | date:'yyyy-MM-dd'}}</td>
+      <td>{{ tx.category.categoryName }}</td>
+    </tr>
+  </tbody>
+</table>

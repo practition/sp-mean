@@ -6,10 +6,12 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeManagerComponent } from './home-manager/home-manager.component';
 import { HomeDailySummaryComponent } from './home-daily-summary/home-daily-summary.component';
 import { HomeDaoService } from './home-dao.service';
+import { TransactionsModule } from '../transactions/transactions.module';
 
 @NgModule({
   imports: [
     CommonModule,
+    TransactionsModule,
     HttpClientModule,
     HomeRoutingModule
   ],

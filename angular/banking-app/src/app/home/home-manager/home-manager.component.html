@@ -1,6 +1,21 @@
-<h2>Welcome to the Home component</h2>
-<div>
-  <h3>Here is your daily summary:</h3>
-
-  <home-daily-summary></home-daily-summary>
-</div>
+<section>
+  <div class="row">
+    <div class="col">
+      <h2 class="home-manager-header">Welcome to the Home component</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-7">
+      <home-daily-summary></home-daily-summary>
+    </div>
+    <div class="col-5 right-column">
+      <div class="right-content">
+        <h3>Your last five transactions</h3>
+        <tx-list [transactions]="last5Tx"
+                 (selectTransaction)="handleSelectTransaction($event)"></tx-list>
+        <h3>Your last transaction:</h3>
+        <tx-detail [displayTx]="lastTx"></tx-detail>
+      </div>
+    </div>
+  </div>
+</section>
