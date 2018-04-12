@@ -1,0 +1,18 @@
+<form>
+  <div class="form-check form-check-inline">
+    <input (click)="handleCheck($event)" class="form-check-input" type="radio" name="toggleReturn" id="success-radio"
+           value="success">
+    <label for="success-radio" class="form-check-label"> Success</label>
+  </div>
+
+  <div class="form-check form-check-inline">
+    <input (click)="handleCheck($event)" class="form-check-input" type="radio" name="toggleReturn" id="failure-radio"
+           value="failure">
+    <label for="failure-radio" class="form-check-label"> Failed</label>
+  </div>
+
+  <div *ngIf="obs">
+    <p>Observer returns: {{ obs | async }}</p>
+    <p *ngIf="obsResult">Without async: {{ obsResult }}</p>
+  </div>
+</form>
