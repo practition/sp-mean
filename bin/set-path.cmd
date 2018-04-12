@@ -15,7 +15,7 @@ echo Modified COURSE_ROOT %COURSE_ROOT%
 set OLD_PATH=%PATH%
 
 echo Setting PATH....
-set PATH=%PATH%;%COURSE_ROOT%\bin\node_modules\.bin;%COURSE_ROOT%\node\node_modules\.bin;%COURSE_ROOT%\mongo\node_modules\.bin
+set PATH=%PATH%;%COURSE_ROOT%\bin\node_modules\.bin;%COURSE_ROOT%\node\node_modules\.bin;%COURSE_ROOT%\mongo\node_modules\.bin;%COURSE_ROOT%\angular\banking-app\node_modules\.bin
 
 echo PATH successfully set for MEAN course
 echo PATH is %PATH%
