@@ -9,7 +9,7 @@ import 'rxjs/Rx';
 } )
 export class ObservableSuccessOrFailureComponent implements OnInit {
 
-  obs: Observable;
+  obs: Observable<string>;
   obsResult: any;
 
   constructor() { }
