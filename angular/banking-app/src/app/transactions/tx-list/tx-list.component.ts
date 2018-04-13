@@ -14,7 +14,7 @@ export class TxListComponent implements OnInit {
   @Input()
   transactions: Transaction[];
 
-  handleClick(tx: Transaction) {
+  callSelectTransaction(tx: Transaction) {
     this.selectTransaction.emit(tx);
   }
 

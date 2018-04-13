@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "categoryName": "Salary",
+    "categoryType": "income"
+  },
+  {
+    "id": "2",
+    "categoryName": "Other income",
+    "categoryType": "income"
+  },
+  {
+    "id": "3",
+    "categoryName": "Interest",
+    "categoryType": "income"
+  },
+  {
+    "id": "101",
+    "categoryName": "Clothing",
+    "categoryType": "expense"
+  },
+  {
+    "id": "102",
+    "categoryName": "Housing",
+    "categoryType": "expense"
+  },
+  {
+    "id": "103",
+    "categoryName": "Food",
+    "categoryType": "expense"
+  },
+  {
+    "id": "104",
+    "categoryName": "Entertainment",
+    "categoryType": "expense"
+  },
+  {
+    "id": "105",
+    "categoryName": "Medical",
+    "categoryType": "expense"
+  },
+  {
+    "id": "106",
+    "categoryName": "Utilities",
+    "categoryType": "expense"
+  },
+  {
+    "id": "107",
+    "categoryName": "Transportation",
+    "categoryType": "expense"
+  },
+  {
+    "id": "108",
+    "categoryName": "Cash",
+    "categoryType": "expense"
+  }
+]

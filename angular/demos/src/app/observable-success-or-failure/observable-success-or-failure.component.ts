@@ -23,7 +23,7 @@ export class ObservableSuccessOrFailureComponent implements OnInit {
         observer.next( 'success' );
         observer.complete();
       } else {
-        observer.error( 'ERROR' );
+        observer.error( 'This is the message associated with the failed Observable' );
       }
     } ).delay( 500 );
 
@@ -32,7 +32,7 @@ export class ObservableSuccessOrFailureComponent implements OnInit {
         this.obsResult = success;
       },
       err => {
-        console.error( 'Error! ', err );
+        console.error( 'Customized error handler! ', err );
         this.obsResult = err;
       },
       () => {

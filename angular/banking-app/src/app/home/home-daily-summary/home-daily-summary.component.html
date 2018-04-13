@@ -4,7 +4,7 @@
         Here is your daily summary:
       </div>
       <div class="card-body" *ngIf="summary">
-        You spent {{ summary.lastTxAmount | currency }} at {{ summary.lastTxPayee }}
+        You spent {{ summary.lastTxAmount | abs | currency }} at {{ summary.lastTxPayee }}
         in your last transaction. You have spent
         {{ summary.categoryAmount | currency }} on
         {{ summary.category | lowercase }} this {{ today | date: 'MMMM' }}.

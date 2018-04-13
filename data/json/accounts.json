@@ -1,0 +1,98 @@
+[
+  {
+    "id": "1",
+    "personId": "201",
+    "startingBalance": 1000,
+    "accountType": "Checking"
+  },
+  {
+    "id": "2",
+    "personId": "201",
+    "startingBalance": 10000,
+    "accountType": "Savings"
+  },
+  {
+    "id": "3",
+    "personId": "202",
+    "startingBalance": 500,
+    "accountType": "Checking"
+  },
+  {
+    "id": "4",
+    "personId": "202",
+    "startingBalance": 100,
+    "accountType": "Savings"
+  },
+  {
+    "id": "5",
+    "personId": "203",
+    "startingBalance": 865,
+    "accountType": "Checking"
+  },
+  {
+    "id": "6",
+    "personId": "204",
+    "startingBalance": 10,
+    "accountType": "Checking"
+  },
+  {
+    "id": "7",
+    "personId": "204",
+    "startingBalance": 5,
+    "accountType": "Savings"
+  },
+  {
+    "id": "8",
+    "personId": "205",
+    "startingBalance": 6843,
+    "accountType": "Checking"
+  },
+  {
+    "id": "9",
+    "personId": "205",
+    "startingBalance": 3168,
+    "accountType": "Savings"
+  },
+  {
+    "id": "10",
+    "personId": "206",
+    "startingBalance": 895,
+    "accountType": "Checking"
+  },
+  {
+    "id": "11",
+    "personId": "206",
+    "startingBalance": 594,
+    "accountType": "Savings"
+  },
+  {
+    "id": "12",
+    "personId": "207",
+    "startingBalance": 1686,
+    "accountType": "Checking"
+  },
+  {
+    "id": "13",
+    "personId": "208",
+    "startingBalance": 6551,
+    "accountType": "Checking"
+  },
+  {
+    "id": "14",
+    "personId": "209",
+    "startingBalance": 12584868,
+    "accountType": "Savings"
+  },
+  {
+    "id": "15",
+    "personId": "210",
+    "startingBalance": 500,
+    "accountType": "Checking"
+  },
+  {
+    "id": "16",
+    "personId": "210",
+    "startingBalance": 125,
+    "accountType": "Savings"
+  }
+]

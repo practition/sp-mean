@@ -9,7 +9,7 @@
   </thead>
   <tbody>
     <tr *ngFor="let tx of transactions"
-    (click)="handleClick(tx)">
+    (click)="callSelectTransaction(tx)">
       <td>{{ tx.payee.payeeName }}</td>
       <td>{{ tx.amount | currency }}</td>
       <td class="text-nowrap">{{ tx.txDate | date:'yyyy-MM-dd'}}</td>
